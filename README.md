@@ -1,8 +1,8 @@
-## iris-dataset-titanic
-This repository contains a class and data of Titanic passengers in a Global
+## dataset-finance
+I created this dataset for InterSystems Datasets Contest to present this repository containing code (a Class) and data (a Global) of finance transactions.
 
 ## Dataset Source and license
-The dataset is taken from [kaggle](https://www.kaggle.com/hesh97/titanicdataset-traincsv)
+The dataset was created by me by running a macro in Excel to export transaction data into a comma separated values (CSV) text file.
 License - [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 
 
@@ -11,14 +11,14 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 
 ## Installation 
 
-zpm "install dataset-titanic"
+zpm "install dataset-finance"
 
 ## Development
 
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/objectscript-docker-template.git
+$ git clone https://github.com/oliverwilms/dataset-finance.git
 ```
 
 Open the terminal in this directory and run:
@@ -34,7 +34,7 @@ In IRIS terminal:
 ```
 $ docker-compose exec iris iris session iris
 USER>D $System.SQL.Shell()
-[SQL]USER>>Select * from dc_data.Titanic
+[SQL]USER>>Select ID, "Date", "Check", Merchant, Category, SubCategory, Memo, Credit, Debit, BillPay, DebitCard, Account, Status FROM dc_data_finance."transaction"
 ...
 890     890     1       1       Behr, Mr. Karl Howell   male    26      0       0       111369  30       C148    C
 891     891     0       3       Dooley, Mr. Patrick     male    32      0       0       370376  7.75             Q
@@ -66,4 +66,3 @@ Feel free to delete PackageSample folder and place your ObjectScript classes in 
 [Read more about folder setup for InterSystems ObjectScript](https://community.intersystems.com/post/simplified-objectscript-source-folder-structure-package-manager)
 
 The script in Installer.cls will import everything you place under /src into IRIS.
-
