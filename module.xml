@@ -3,12 +3,12 @@
   <Document name="dataset-finance.ZPM">
     <Module>
       <Name>dataset-finance</Name>
-      <Description>Module imports finance data in dc.data.finance.transaction class</Description>
+      <Description>Module imports finance dataset into dc.data.finance.transact class</Description>
       <Version>1.0.0</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.data.PKG"/>
-      <Resource Name="dc.data.finance.transactionD.GBL"/>
+      <Resource Name="dc.data.finance.transactD.GBL"/>
     </Module>
   </Document>
 </Export>
