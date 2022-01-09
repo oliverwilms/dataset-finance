@@ -1,7 +1,7 @@
 Class dc.data.finance.transact Extends %Library.Persistent
 {
 
-Property TranDate As %Library.Integer(MAXVAL = 2147483647, MINVAL = -2147483648) [ SqlColumnNumber = 2 ];
+Property TranDate As %Library.Date [ SqlColumnNumber = 2 ];
 
 Property CheckNumber As %Library.Integer(MAXVAL = 2147483647, MINVAL = -2147483648) [ SqlColumnNumber = 3 ];
 
