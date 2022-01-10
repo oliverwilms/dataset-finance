@@ -6,14 +6,14 @@ FROM $IMAGE
 USER root
 
 WORKDIR /opt/irisbuild
-RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisbuild
-USER ${ISC_PACKAGE_MGRUSER}
+#RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisbuild
 
 COPY data data
 COPY  src src
 COPY module.xml module.xml
 COPY iris.script iris.script
 RUN chown -R ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisbuild
+USER ${ISC_PACKAGE_MGRUSER}
 RUN iris start IRIS \
     && iris session IRIS < iris.script \
     && iris stop IRIS quietly
