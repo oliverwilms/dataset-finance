@@ -2,7 +2,7 @@ Class dc.data.util
 {
 
 /// Update Date Column from 'MM/DD/YYYY' to 'YYYY-MM-DD'
-ClassMethod UpdateDateValues(pInFile As %String = "finance.csv", pPath As %String = "/irisrun/repo/data/") As %Status
+ClassMethod UpdateDateValues(pInFile As %String = "finance-transactions-08-Jan-2022_08-25.csv", pPath As %String = "/opt/irisbuild/data/") As %Status
 {
     Set tEOF = 0
     Set tExtension = $Piece(pInFile,".",2,*)
