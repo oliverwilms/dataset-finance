@@ -4,6 +4,7 @@ Class dc.data.util
 /// Update Date Column from 'MM/DD/YYYY' to 'YYYY-MM-DD'
 ClassMethod UpdateDateValues(pInFile As %String = "finance-transactions-08-Jan-2022_08-25.csv", pPath As %String = "/opt/irisbuild/data/") As %Status
 {
+    Write "Begin UpdateDateValues",!
     Set tEOF = 0
     Set tExtension = $Piece(pInFile,".",2,*)
     Set tRoot = $Piece(pInFile,".",1)
@@ -31,6 +32,8 @@ ClassMethod UpdateDateValues(pInFile As %String = "finance-transactions-08-Jan-2
             Set tEOF = 1
         }
         If tEOF Quit
+        Use 0
+        Write "."
         Set tValue1 = $Piece(line,",",1)
         Set tValue2 = $Piece(line,",",2,*)
         Set tE1 = $Extract(tValue1,1)
@@ -51,6 +54,8 @@ ClassMethod UpdateDateValues(pInFile As %String = "finance-transactions-08-Jan-2
     }
     Close input
     Close output
+    Use 0
+    Write "UpdateDateValues Done",!
     Quit tSC
 }
 
