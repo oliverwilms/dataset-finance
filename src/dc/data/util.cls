@@ -8,6 +8,7 @@ ClassMethod UpdateDateValues(pInFile As %String = "finance-transactions-08-Jan-2
     Set tExtension = $Piece(pInFile,".",2,*)
     Set tRoot = $Piece(pInFile,".",1)
     Set tOutFile = tRoot_"_updateDateValues."_tExtension
+    Set tOutFile = pPath_"finance.csv"
     Set tSC = $$$OK
     Set input = pPath_pInFile
     Set output = pPath_tOutFile
