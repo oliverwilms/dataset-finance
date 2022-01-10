@@ -33,17 +33,29 @@ In IRIS terminal:
 
 ```
 $ docker-compose exec iris iris session iris
-USER>D $System.SQL.Shell()
-[SQL]USER>>Select ID, "Date", "Check", Merchant, Category, SubCategory, Memo, Credit, Debit, BillPay, DebitCard, Account, Status FROM dc_data_finance."transaction"
-...
-890     890     1       1       Behr, Mr. Karl Howell   male    26      0       0       111369  30       C148    C
-891     891     0       3       Dooley, Mr. Patrick     male    32      0       0       370376  7.75             Q
 
-891 Rows(s) Affected
-statement prepare time(s)/globals/cmds/disk: 0.2047s/51607/268016/0ms
-          execute time(s)/globals/cmds/disk: 0.1058s/892/161300/0ms
-                          cached query class: %sqlcq.USER.cls8
-```
+Node: 01c3974cc7dc, Instance: IRIS
+
+USER>s x = ##class(dc.data.util).UpdateDateValues()
+Begin UpdateDateValues
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................UpdateDateValues Done
+
+USER>do $System.SQL.Shell()
+SQL Command Line Shell
+----------------------------------------------------
+
+The command prefix is currently set to: <<nothing>>.
+Enter <command>, 'q' to quit, '?' for help.
+[SQL]USER>>LOAD DATA FROM FILE '/opt/irisbuild/data/finance.csv' INTO dc_data_finance.transact(TranDate,CheckNumber,Merchant,Category,SubCategory,Memo,Credit,Debit,BillPay,DebitCard,Account,Status) VALUES("Date","Check",Merchant,Category,SubCategory,Memo,Credit,Debit,"Bill Pay","Debit Card",Account,Status) USING {"from":{"file":{"header":"1"}}}
+1.      LOAD DATA FROM FILE '/opt/irisbuild/data/finance.csv' INTO dc_data_finance.transact(TranDate,CheckNumber,Merchant,Category,SubCategory,Memo,Credit,Debit,BillPay,DebitCard,Account,Status) VALUES("Date","Check",Merchant,Category,SubCategory,Memo,Credit,Debit,"Bill Pay","Debit Card",Account,Status) USING {"from":{"file":{"header":"1"}}}
+
+2007 Rows Affected
+statement prepare time(s)/globals/cmds/disk: 0.0255s/2,431/27,070/1ms
+          execute time(s)/globals/cmds/disk: 2.7615s/107,078/950,441/18ms
+                          cached query class: %sqlcq.USER.cls6
+---------------------------------------------------------------------------
+[SQL]USER>>
+...
 
 ## In InterSystems SQL Tools in VSCode
 Open repo in VSCode (see develoment above)
@@ -64,5 +76,3 @@ Open /src/cls/PackageSample/ObjectScript.cls class and try to make changes - it 
 Feel free to delete PackageSample folder and place your ObjectScript classes in a form
 /src/Package/Classname.cls
 [Read more about folder setup for InterSystems ObjectScript](https://community.intersystems.com/post/simplified-objectscript-source-folder-structure-package-manager)
-
-The script in Installer.cls will import everything you place under /src into IRIS.
