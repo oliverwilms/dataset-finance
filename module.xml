@@ -8,7 +8,7 @@
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.data.PKG"/>
-      <Resource Name="dc.data.finance.transactD.GBL"/>
+      <Resource Name="dc.data.TitanicD.GBL"/>
     </Module>
   </Document>
 </Export>
