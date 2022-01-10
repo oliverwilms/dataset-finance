@@ -1,10 +1,10 @@
 ## dataset-finance
-I created this dataset for InterSystems Datasets Contest to present this repository containing code (a Class) and data (a Global) of finance transactions.
+I created this dataset for InterSystems Datasets Contest to present this repository containing code (a Class) and data (a CSV file) of finance transactions to be loaded into a Global with new SQL LOAD DATA command.
 
 ## Dataset Source and license
 The dataset was created by me by running a macro in Excel to export transaction data into a comma separated values (CSV) text file.
-License - [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
-
+I had to write and run a classmethod in dc.data.util class to convert data values from 'MM/DD/YYYY' format to 'YYYY-MM-DD' format. 
+This dataset can be used under MIT License.
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
