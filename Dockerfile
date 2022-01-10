@@ -13,6 +13,7 @@ COPY  src src
 COPY module.xml module.xml
 COPY iris.script iris.script
 RUN chown -R ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisbuild/
+RUN chmod 777 data
 USER ${ISC_PACKAGE_MGRUSER}
 RUN iris start IRIS \
     && iris session IRIS < iris.script \
