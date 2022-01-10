@@ -7,7 +7,7 @@ zn "USER"
 ; zpm "install csvgen"
 ; d ##class(community.csvgen).GenerateFromURL("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv",",","dc.data.Titanic")
 
-zpm "load /opt/irisbuild/ -v":1:1
+zpm "load /opt/irisbuild/ -v":1:0
 Do ##class(dc.data.util).UpdateDateValues()
 Do $System.SQL.Shell()
 LOAD DATA FROM FILE '/opt/irisbuild/data/finance.csv' INTO dc_data_finance.transact(TranDate,CheckNumber,Merchant,Category,SubCategory,Memo,Credit,Debit,BillPay,DebitCard,Account,Status) VALUES("Date","Check",Merchant,Category,SubCategory,Memo,Credit,Debit,"Bill Pay","Debit Card",Account,Status) USING {"from":{"file":{"header":"1"}}}
