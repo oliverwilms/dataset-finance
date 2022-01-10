@@ -8,4 +8,5 @@ zn "USER"
 ; d ##class(community.csvgen).GenerateFromURL("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv",",","dc.data.Titanic")
 
 zpm "load /opt/irisbuild/ -v":1:1
+Do ##class(dc.data.util).UpdateDateValues()
 halt
