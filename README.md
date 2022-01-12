@@ -55,7 +55,7 @@ statement prepare time(s)/globals/cmds/disk: 0.0255s/2,431/27,070/1ms
                           cached query class: %sqlcq.USER.cls6
 ---------------------------------------------------------------------------
 [SQL]USER>>
-...
+```
 
 ## In InterSystems SQL Tools in VSCode
 Open repo in VSCode (see develoment above)
