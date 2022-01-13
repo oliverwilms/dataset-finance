@@ -3,6 +3,7 @@ Class dc.data.finance.util
 
 ClassMethod loadData() As %Status
 {
+    Quit $$$OK  // Load the global instead in module.xml
     Set pInFile = "finance-transactions-08-Jan-2022_08-25.csv"
     Set pPath = "/usr/irissys/lib/data/"
     Set tDataFile = pPath_pInFile
