@@ -4,13 +4,13 @@
     <Module>
       <Name>dataset-finance</Name>
       <Description>Module imports finance dataset into dc.data.finance.transact class</Description>
-      <Version>1.0.2</Version>
+      <Version>1.0.3</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.data.PKG"/>
       <Resource Name="dc.data.TitanicD.GBL"/>
       <Parameter Name="folder" Value="data"/>
-      <FileCopy Name="data/" Target="${libdir}/${folder}/">
+      <FileCopy Name="data/" Target="${libdir}/${folder}/"/>
       <Invokes>
         <Invoke Class="dc.data.finance.util" Method="loadData"></Invoke>
       </Invokes>
