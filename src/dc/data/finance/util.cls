@@ -9,7 +9,7 @@ ClassMethod loadData() As %Status
     Set tExists = ##class(%File).Exists(pPath)
     If (0 = tExists) Quit $$$ERROR($$$GeneralError,pPath_" does not exist.")
     Set tExists = ##class(%File).Exists(tDataFile)
-    If (0 = tExists) Quit $$$ERROR($$$GeneralError,tDataFile" does not exist.")
+    If (0 = tExists) Quit $$$ERROR($$$GeneralError,tDataFile_" does not exist.")
     Set tSC = ##class(dc.data.util).UpdateDateValues(pInFile,pPath)
     Set tLoadFile = pPath_"finance.csv"
     // Dynamic SQL
