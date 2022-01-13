@@ -16,7 +16,7 @@ ClassMethod loadData() As %Status
     // Dynamic SQL
     Set q = """"
     SET myquery = 3
-    SET myquery(1) = "LOAD DATA FROM FILE '"_tLoadFile_"'"
+    SET myquery(1) = "LOAD DATA FROM FILE '"_:tLoadFile_"'"
     SET x = "INTO dc_data_finance.transact(TranDate,CheckNumber,Merchant,Category,SubCategory,Memo,Credit,Debit,BillPay,DebitCard,Account,Status) VALUES(?Date?,?Check?,Merchant,Category,SubCategory,Memo,Credit,Debit,?Bill Pay?,?Debit Card?,Account,Status)"
     SET myquery(2)= $Translate(x,"?",q)
     SET x = "USING {?from?:{?file?:{?header?:?1?}}}"
