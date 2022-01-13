@@ -55,7 +55,7 @@ ClassMethod UpdateDateValues(pInFile As %String = "finance-transactions-08-Jan-2
     Close input
     Close output
     Use 0
-    Write "UpdateDateValues Done",!
+    Write !,"UpdateDateValues Done",!
     Quit tSC
 }
 
