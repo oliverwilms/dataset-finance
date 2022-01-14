@@ -7,8 +7,7 @@ I had to write and run a classmethod in dc.data.util class to convert data value
 This dataset can be used under MIT License.
 
 ## analyze-dataset-finance
-You can analyze the dataset with my app analyze-dataset-finance:
-Install [analyze-dataset-finance](https://github.com/oliverwilms/analyze-daset-finance.git)
+You can analyze the dataset with my other app found here - [analyze-dataset-finance](https://github.com/oliverwilms/analyze-dataset-finance.git)
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
