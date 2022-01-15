@@ -4,7 +4,7 @@
     <Module>
       <Name>dataset-finance</Name>
       <Description>Module imports finance dataset into dc.data.finance.transact class</Description>
-      <Version>1.0.6</Version>
+      <Version>1.0.7</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.data.PKG"/>
