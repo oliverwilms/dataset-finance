@@ -9,6 +9,9 @@ This dataset can be used under MIT License.
 ## analyze-dataset-finance
 You can analyze the dataset with my other app found here - [analyze-dataset-finance](https://github.com/oliverwilms/analyze-dataset-finance.git)
 
+## Online Demo
+You can find online demo here - [demo](https://finance.demo.community.intersystems.com/dsw/index.html#/USER/Generated/Samples%20for%20finance.dashboard)
+
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
