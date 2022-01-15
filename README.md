@@ -12,6 +12,9 @@ You can analyze the dataset with my other app found here - [analyze-dataset-fina
 ## Online Demo
 You can find online demo here - [demo](https://finance.demo.community.intersystems.com/dsw/index.html#/USER/Generated/Samples%20for%20finance.dashboard)
 
+## YouTube Video
+My very first TouTube video can be seen here - [video](https://youtu.be/2lK1aHUFZek)
+
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
