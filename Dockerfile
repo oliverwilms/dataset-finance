@@ -1,6 +1,7 @@
 ARG IMAGE=intersystemsdc/iris-community
 ARG IMAGE=store/intersystems/iris-community:2021.2.0.617.0
 ARG IMAGE=intersystemsdc/iris-ml-community:2021.2.0.617.0-zpm
+ARG IMAGE=intersystemsdc/iris-ml-community
 FROM $IMAGE
 
 USER root
